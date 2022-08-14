@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
 
 app.get("/api", (req, res) => {
   res.send("hallo");
