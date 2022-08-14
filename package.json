@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "concurrently \"vite\" \"cd ./server && npx tsc --watch\" \"nodemon ./server/dist/index.js ",
-    "build": "tsc && vite build",
+    "build": "concurrently \"tsc && vite build\" \"cd ./server && npx tsc\"",
     "preview": "concurrently \"vite preview\" \"node ./server/dist/index.js"
   },
   "dependencies": {
